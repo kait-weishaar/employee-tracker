@@ -1,5 +1,13 @@
 const mysql = require('mysql2');
 // Connect to database
+
+welcome = ()=>{
+  console.log('-----------------------------------')
+  console.log('|                                 |')
+  console.log('|         EMPLOYEE TRACKER        |')
+  console.log('|                                 |')
+  console.log('-----------------------------------')
+ }
 const db = mysql.createConnection(
     {
       host: 'localhost',
@@ -7,9 +15,10 @@ const db = mysql.createConnection(
       user: 'root',
       // Your MySQL password
       password: 'KAITweish5323!',
-      database: 'election'
+      database: 'employees_db'
     },
-    console.log('Connected to the election database.')
+    welcome()
+    
   );
-
+ 
   module.exports = db;
